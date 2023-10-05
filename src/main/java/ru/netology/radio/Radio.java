@@ -2,8 +2,34 @@ package ru.netology.radio;
 
 public class Radio {
     private int radioStation;
-
     private int radioVol;
+    private int nextStation;
+    private int prevStation;
+
+    public int getPrevStation() {
+        return prevStation;
+    }
+
+    public void setPrevStation(int prevStation) {
+        if (radioStation != 8) {
+            radioStation--;
+        } else {
+            radioStation = 9;
+        }
+        this.prevStation = prevStation;
+    }
+
+    public int getNextStation() {
+        return nextStation;
+    }
+
+    public void setNextStation(int nextStation) {
+        if (radioStation != 9) {
+            radioStation++;
+            return;
+        }
+        radioStation = 0;
+    }
 
     public int getRadioStation() {
         return radioStation;
@@ -39,4 +65,5 @@ public class Radio {
         this.radioVol = radioVol;
     }
 }
+
 

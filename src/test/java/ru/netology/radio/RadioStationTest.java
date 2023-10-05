@@ -10,7 +10,6 @@ public class RadioStationTest {
         Radio radio = new Radio();
         radio.setRadioStation(7);
 
-
         int expected = 7;
         int actual = radio.getRadioStation();
         Assertions.assertEquals(expected, actual);
