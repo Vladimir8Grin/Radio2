@@ -5,19 +5,21 @@ public class Radio {
     private int radioVol;
 
     public void prevStation() {
-        if (this.radioStation == 0) {
-            this.radioStation = 9;
-        } else {
-            this.radioStation--;
+        if (radioStation != 0) {
+            radioStation--;
+            return;
         }
+        radioStation = 9;
     }
 
+
     public void nextStation() {
-        if (this.radioStation == 9) {
-            this.radioStation = 0;
-        } else {
-            this.radioStation++;
+        if (radioStation != 9) {
+            radioStation++;
+            return;
         }
+        radioStation = 0;
+
     }
 
     public int getRadioStation() {
