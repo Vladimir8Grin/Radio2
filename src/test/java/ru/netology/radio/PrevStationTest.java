@@ -8,40 +8,44 @@ public class PrevStationTest {
     @Test
     public void test() {
         Radio radio = new Radio();
-        radio.setPrevStation(4);
+        radio.setRadioStation(2);
+        radio.prevStation();
 
-        int expected = 3;
-        int actual = radio.getPrevStation();
+        int expected = 1;
+        int actual = radio.getRadioStation();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void test2() {
         Radio radio = new Radio();
-        radio.setPrevStation(7);
+        radio.setRadioStation(1);
+        radio.prevStation();
 
-        int expected = 6;
-        int actual = radio.getPrevStation();
+        int expected = 0;
+        int actual = radio.getRadioStation();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void test3() {
         Radio radio = new Radio();
-        radio.setPrevStation(8);
+        radio.setRadioStation(9);
+        radio.prevStation();
 
-        int expected = 7;
-        int actual = radio.getPrevStation();
+        int expected = 8;
+        int actual = radio.getRadioStation();
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void test4() {
         Radio radio = new Radio();
-        radio.setPrevStation(10);
+        radio.setRadioStation(0);
+        radio.prevStation();
 
-        int expected = 0;
-        int actual = radio.getPrevStation();
+        int expected = 9;
+        int actual = radio.getRadioStation();
         Assertions.assertEquals(expected, actual);
     }
 
