@@ -11,9 +11,9 @@ public class Radio {
         this.volMax = 99;
     }
 
-    public Radio(int StationAndVol) {
-        this.stationMax = StationAndVol - 1;
-        this.volMax = StationAndVol - 1;
+    public Radio(int stationAndVol) {
+        this.stationMax = stationAndVol - 1;
+        this.volMax = stationAndVol - 1;
     }
 
     public void prevStation() {
